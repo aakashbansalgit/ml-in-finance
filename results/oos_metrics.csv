@@ -1,0 +1,11 @@
+,horizon_days,rmse,r2_vs_random_walk,direction_hit_rate,dm_vs_har,dm_p
+Random walk,1,0.0781,0.0000,,,
+HAR,1,0.0774,0.0161,0.5334,,
+"HAR, all features",1,0.0774,0.0159,0.5343,0.1050,0.9164
+Random forest,1,0.0773,0.0203,0.5465,-0.7807,0.4349
+Neural network,1,0.0771,0.0245,0.5467,-1.6449,0.1000
+Random walk,21,0.2536,0.0000,,,
+HAR,21,0.2362,0.1326,0.5828,,
+"HAR, all features",21,0.2371,0.1262,0.5968,0.9808,0.3267
+Random forest,21,0.2452,0.0649,0.6038,3.0280,0.0025
+Neural network,21,0.2414,0.0941,0.5994,1.8634,0.0624
