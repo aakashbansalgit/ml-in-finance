@@ -1,5 +1,10 @@
 # ml-in-finance
 
+[![tests](https://github.com/aakashbansalgit/ml-in-finance/actions/workflows/tests.yml/badge.svg)](https://github.com/aakashbansalgit/ml-in-finance/actions/workflows/tests.yml)
+
+A month ahead, three lagged averages of the VIX forecast it better than a random forest or a neural network, out of sample from 2012 to 2025.
+
+![](figures/har_21d.png)
 Can machine learning forecast implied volatility better than a simple regression? This tests a random forest and a neural network against HAR regressions and a random walk, forecasting the VIX 1 and 21 trading days ahead, out of sample from 2012 to September 2025.
 
 ## Where this came from
