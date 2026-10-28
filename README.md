@@ -43,11 +43,24 @@ A month ahead is where the forecastable part shows up, and almost all of it is m
 
 Year by year in `results/oos_by_year.csv`, the forest has the best single years, 2021 and 2024, and the worst, 2012 and 2017, which is the pattern you would expect from a model fitting noise in calm periods. `figures/har_21d.png` plots the HAR forecast against the VIX 21 days later.
 
+## Live forecasts
+
+A backtest can always be tuned after the fact. `live.py` keeps a record that cannot. Once a month it refits every model on all the data available that day and writes down each one's forecast of the VIX 21 trading days later. When the 21 days have passed, a later run fills in what happened. Forecasts are never edited, and the commit history dates every one of them.
+
+<!-- live:start -->
+| Made on | VIX | Random walk | HAR | HAR, all | Forest | Network | VIX 21 days later |
+|---|---|---|---|---|---|---|---|
+| 2026-10-27 | 17.52 | 17.52 | 17.47 | 17.51 | 16.84 | 17.34 | pending |
+
+No forecast has reached its 21 days yet.
+<!-- live:end -->
+
 ## Running it
 
 ```
 pip install numpy pandas scipy scikit-learn torch matplotlib yfinance
 python vix_forecast.py
+python live.py          # this month's forecast, and score any that are due
 ```
 
 The first run downloads prices into `data/prices.csv`. The full walk-forward takes under a minute on a laptop CPU.
